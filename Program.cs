@@ -1,21 +1,18 @@
-﻿/*Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
-4 -> да
--3 -> нет
-7 -> нет*/
+﻿/*Напишите программу, которая на вход принимает число (N), 
+а на выходе показывает все чётные числа от 1 до N.
+5 -> 2, 4
+8 -> 2, 4, 6, 8*/
 
-Console.Write("Введите число, чтобы узнать четное оно или нет: ");
 Console.Write("Введите число: ");
 int num = int.Parse(Console.ReadLine());
-int remain = num % 2;
-if (remain == 0) Console.WriteLine("Число " + num + " четное!");
-else Console.WriteLine("Число " + num + " нечетное!");
-if (remain == 0)
+int remain = 2;
+int even = 2;
+
+while (num >= remain)
+while (num >= even)
 {
-    Console.WriteLine("Число " + num + " четное?");
-    Console.WriteLine("ДА!");
-}
-else
-{
-    Console.WriteLine("Число " + num + " четное?");
-    Console.WriteLine("НЕТ!");
+    Console.Write(remain + " ");
+    remain = remain + 2;
+    Console.Write(even + " ");
+    even = even + 2;
 }
