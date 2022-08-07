@@ -1,30 +1,21 @@
-﻿/* Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
-2, 3, 7 -> 7
-44 5 78 -> 78
-22 3 9 -> 22*/
+﻿/*Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+4 -> да
+-3 -> нет
+7 -> нет*/
 
-int [] numbers = new int[3];
-int i = 0;
-int max = 0;
-Console.WriteLine("Введите три числа, и узнайте, ");
-Console.WriteLine("какое из них имеет максимальное значение.");
-Console.Write("Введите первое число и нажмите ENTER: ");
-numbers[0] = int.Parse(Console.ReadLine());
-Console.Write("Введите второе число и нажмите ENTER: ");
-numbers[1] = int.Parse(Console.ReadLine());
-Console.Write("Введите третье число и нажмите ENTER: ");
-numbers[2] = int.Parse(Console.ReadLine());
-while (i < numbers.Length)
+Console.Write("Введите число, чтобы узнать четное оно или нет: ");
+Console.Write("Введите число: ");
+int num = int.Parse(Console.ReadLine());
+int remain = num % 2;
+if (remain == 0) Console.WriteLine("Число " + num + " четное!");
+else Console.WriteLine("Число " + num + " нечетное!");
+if (remain == 0)
 {
-    if (numbers[i] > max)
-    {
-        max = numbers[i];
-        i++;
-    }
-    else
-    {
-       i++; 
-    }
+    Console.WriteLine("Число " + num + " четное?");
+    Console.WriteLine("ДА!");
 }
-Console.WriteLine(max);
-Console.Write("Максимальное значение имеет число " + max);
+else
+{
+    Console.WriteLine("Число " + num + " четное?");
+    Console.WriteLine("НЕТ!");
+}
